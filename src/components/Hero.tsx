@@ -16,10 +16,10 @@ export function Hero() {
       
       <div className="max-w-6xl mx-auto text-center relative">
         <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl mb-6 bg-gradient-storybook bg-clip-text text-transparent font-display font-bold animate-fade-in" 
-              style={{lineHeight: '1.1'}}>
-            Mint Your Moments ✨
-          </h1>
+                  <h1 className="text-5xl md:text-7xl mb-6 bg-gradient-storybook bg-clip-text text-transparent font-display font-bold animate-fade-in"
+                      style={{lineHeight: '1.1'}}>
+                    Mint Your Ghibli Moments ✨
+                  </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-sans animate-fade-in" 
              style={{animationDelay: '0.2s'}}>
             Transform your precious photos into beautiful AI-generated storybooks and custom frames. 

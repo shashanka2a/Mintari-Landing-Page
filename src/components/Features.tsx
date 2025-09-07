@@ -62,9 +62,61 @@ export function Features() {
                 <h3 className="text-2xl mb-4 text-gray-800 font-sans font-bold">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed font-sans">
+                <p className="text-gray-600 leading-relaxed font-sans mb-4">
                   {feature.description}
                 </p>
+                
+                {/* Feature Benefits */}
+                <div className="space-y-2">
+                  {feature.title === "AI Art Generation" && (
+                    <>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 rounded-full bg-soft-pink-400"></div>
+                        <span className="font-sans">Studio Ghibli Style</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 rounded-full bg-coral-400"></div>
+                        <span className="font-sans">Watercolor Effects</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 rounded-full bg-soft-pink-400"></div>
+                        <span className="font-sans">Oil Painting Style</span>
+                      </div>
+                    </>
+                  )}
+                  {feature.title === "NFT Minting" && (
+                    <>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 rounded-full bg-lavender-400"></div>
+                        <span className="font-sans">Blockchain Verified</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 rounded-full bg-sky-blue-400"></div>
+                        <span className="font-sans">Unique Ownership</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 rounded-full bg-lavender-400"></div>
+                        <span className="font-sans">Tradeable Assets</span>
+                      </div>
+                    </>
+                  )}
+                  {feature.title === "Custom Frames" && (
+                    <>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 rounded-full bg-peach-400"></div>
+                        <span className="font-sans">Premium Materials</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 rounded-full bg-coral-400"></div>
+                        <span className="font-sans">Custom Sizes</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 rounded-full bg-peach-400"></div>
+                        <span className="font-sans">Worldwide Shipping</span>
+                      </div>
+                    </>
+                  )}
+                </div>
               </CardContent>
             </Card>
           ))}

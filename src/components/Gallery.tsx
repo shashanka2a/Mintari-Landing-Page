@@ -2,7 +2,7 @@
 
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useState } from 'react';
-import { Sparkles, MousePointer } from 'lucide-react';
+import { Sparkles, MousePointer, Heart, Share2, Download } from 'lucide-react';
 
 export function Gallery() {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
@@ -11,12 +11,18 @@ export function Gallery() {
     {
       original: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBwb3J0cmFpdCUyMG1lbW9yaWVzfGVufDF8fHx8MTc1NzI4NDY0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       transformed: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBwb3J0cmFpdCUyMG1lbW9yaWVzfGVufDF8fHx8MTc1NzI4NDY0Mnww&ixlib=rb-4.1.0&q=80&w=1080&sat=-100&hue=200&blur=2",
-      title: "Family Portrait → Magical Painting"
+      title: "Family Portrait → Magical Painting",
+      date: "Dec 15, 2024",
+      likes: 124,
+      style: "Spirited Away Style"
     },
     {
       original: "https://images.unsplash.com/photo-1494790108755-2616b612b786?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1lbW9yaWVzfGVufDF8fHx8MTc1NzI4NDYzNXww&ixlib=rb-4.1.0&q=80&w=1080",
       transformed: "https://images.unsplash.com/photo-1494790108755-2616b612b786?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1lbW9yaWVzfGVufDF8fHx8MTc1NzI4NDYzNXww&ixlib=rb-4.1.0&q=80&w=1080&sat=-50&hue=300&blur=1",
-      title: "Childhood Memory → Storybook Art"
+      title: "Childhood Memory → Storybook Art",
+      date: "Dec 14, 2024",
+      likes: 89,
+      style: "My Neighbor Totoro"
     }
   ];
 
@@ -92,11 +98,37 @@ export function Gallery() {
                 </div>
                 
                 {/* Title with magical styling */}
-                <div className="mt-6 text-center">
-                  <h3 className="text-lg text-gray-800 font-sans font-semibold bg-gradient-to-r from-lavender-600 to-soft-pink-600 bg-clip-text text-transparent">
-                    {item.title}
-                  </h3>
-                </div>
+                        <div className="mt-6 space-y-3">
+                          <h3 className="text-lg text-gray-800 font-sans font-semibold bg-gradient-to-r from-lavender-600 to-soft-pink-600 bg-clip-text text-transparent text-center">
+                            {item.title}
+                          </h3>
+                          
+                          {/* Metadata */}
+                          <div className="flex items-center justify-between text-sm text-gray-600">
+                            <span className="font-sans">{item.date}</span>
+                            <div className="flex items-center space-x-1">
+                              <Heart className="w-4 h-4 text-soft-pink-500" />
+                              <span className="font-sans">{item.likes}</span>
+                            </div>
+                          </div>
+                          
+                          {/* Style Tag */}
+                          <div className="text-center">
+                            <span className="inline-block bg-gradient-to-r from-lavender-100 to-soft-pink-100 text-lavender-700 px-3 py-1 rounded-full text-xs font-sans font-medium">
+                              {item.style}
+                            </span>
+                          </div>
+                          
+                          {/* Action Buttons */}
+                          <div className="flex items-center justify-center space-x-4 pt-2">
+                            <button className="p-2 rounded-full bg-white/80 hover:bg-white shadow-md hover:shadow-lg transition-all duration-200">
+                              <Share2 className="w-4 h-4 text-gray-600" />
+                            </button>
+                            <button className="p-2 rounded-full bg-white/80 hover:bg-white shadow-md hover:shadow-lg transition-all duration-200">
+                              <Download className="w-4 h-4 text-gray-600" />
+                            </button>
+                          </div>
+                        </div>
               </div>
             </div>
           ))}

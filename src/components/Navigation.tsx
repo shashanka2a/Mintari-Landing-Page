@@ -11,9 +11,25 @@ export function Navigation() {
     <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-lg z-50 border-b border-soft-pink-100 shadow-sm">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
+          <div className="flex items-center space-x-3">
+            {/* Magic Logo */}
+            <div className="w-8 h-8 rounded-full bg-gradient-storybook flex items-center justify-center shadow-lg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style={{stopColor:"#fb923c", stopOpacity:1}} />
+                    <stop offset="100%" style={{stopColor:"#f56565", stopOpacity:1}} />
+                  </linearGradient>
+                </defs>
+                <path d="M10,-4 L3,-1 L10,2 L3,5 L10,8 L-3,5 L-10,2 L-3,-1 Z" 
+                      fill="white" 
+                      stroke="url(#logoGradient)" 
+                      strokeWidth="0.5"/>
+                <circle cx="0" cy="0" r="1" fill="#fbbf24"/>
+              </svg>
+            </div>
             <div className="text-2xl bg-gradient-storybook bg-clip-text text-transparent font-display font-bold">
-              Mintari ✨
+              Mintari
             </div>
           </div>
           

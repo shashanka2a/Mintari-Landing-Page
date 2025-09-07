@@ -18,6 +18,8 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mintari - Mint Your Moments ✨" />
         <meta name="twitter:description" content="Transform your precious photos into beautiful AI-generated storybooks and custom frames. Turn memories into masterpieces." />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.svg" type="image/x-icon" />
       </Head>
       
       <div className="min-h-screen">

@@ -1,0 +1,48 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with magical gradient -->
+  <defs>
+    <linearGradient id="magicalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e87979;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sparkleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fb923c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f56565;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main circle background -->
+  <circle cx="16" cy="16" r="15" fill="url(#magicalGradient)" stroke="white" stroke-width="2"/>
+  
+  <!-- Magic wand -->
+  <g transform="translate(8, 6)">
+    <!-- Wand stick -->
+    <rect x="6" y="2" width="1.5" height="12" fill="#8b5cf6" rx="0.75"/>
+    <!-- Wand tip -->
+    <circle cx="6.75" cy="2" r="1.5" fill="url(#sparkleGradient)"/>
+    <!-- Magic sparkles around wand -->
+    <g opacity="0.8">
+      <circle cx="3" cy="4" r="0.5" fill="#fbbf24"/>
+      <circle cx="11" cy="3" r="0.3" fill="#fbbf24"/>
+      <circle cx="4" cy="8" r="0.4" fill="#fbbf24"/>
+      <circle cx="10" cy="7" r="0.3" fill="#fbbf24"/>
+    </g>
+  </g>
+  
+  <!-- Central magic symbol (star) -->
+  <g transform="translate(16, 16)">
+    <path d="M0,-6 L1.8,-1.8 L6,0 L1.8,1.8 L0,6 L-1.8,1.8 L-6,0 L-1.8,-1.8 Z" 
+          fill="white" 
+          stroke="url(#sparkleGradient)" 
+          stroke-width="0.5"/>
+  </g>
+  
+  <!-- Floating sparkles -->
+  <g opacity="0.7">
+    <circle cx="4" cy="8" r="0.8" fill="#fbbf24"/>
+    <circle cx="26" cy="6" r="0.6" fill="#fbbf24"/>
+    <circle cx="6" cy="24" r="0.5" fill="#fbbf24"/>
+    <circle cx="28" cy="26" r="0.7" fill="#fbbf24"/>
+  </g>
+</svg>
